@@ -1,2 +1,0 @@
-# zhcindy.github.io
-website
