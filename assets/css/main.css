@@ -1,5 +1,6 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 /*
 	Editorial by HTML5 UP
@@ -3807,9 +3808,10 @@
 
 		#header .logo {
 			border-bottom: 0;
-			color: inherit;
-			font-family: "Roboto Slab", serif;
-			font-size: 1.125em;
+			color: #3d4449;
+			font-family: "Roboto", sans-serif;
+			font-size: 3em;
+			text-align: center;
 		}
 
 		#header .icons {
