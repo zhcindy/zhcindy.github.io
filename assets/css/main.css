@@ -2637,10 +2637,6 @@
 		}
 
 		a.image:hover img {
-			-moz-transform: scale(1.075);
-			-webkit-transform: scale(1.075);
-			-ms-transform: scale(1.075);
-			transform: scale(1.075);
 		}
 
 /* List */
@@ -3592,7 +3588,7 @@
 			height: 2em;
 			line-height: 2em;
 			opacity: 0.325;
-			position: absolute;
+			position: absolute !important;
 			right: 0;
 			text-align: center;
 			top: 0;
@@ -3707,17 +3703,37 @@
 
 			#sidebar {
 				width: 24em;
+				box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
+				height: 100%;
+				left: 0;
+				position: fixed;
+				top: 0;
+				z-index: 10000;
 			}
 
 				#sidebar > .inner {
 					padding: 1.66667em 1.66667em 1.33333em 1.66667em ;
 					width: 24em;
+					-webkit-overflow-scrolling: touch;
+					height: 100%;
+					left: 0;
+					overflow-x: hidden;
+					overflow-y: auto;
+					position: absolute !important;
+					top: 0 !important;
 				}
 
 					#sidebar > .inner > .alt {
 						margin: -1.66667em 0 3.33333em -1.66667em;
 						padding: 1.66667em;
 						width: calc(100% + 3.33333em);
+					}
+
+					#sidebar > .inner:after {
+					content: '';
+					display: block;
+					height: 4em;
+					width: 100%;
 					}
 
 				#sidebar .toggle {
@@ -3730,12 +3746,17 @@
 
 					#sidebar .toggle:before {
 						font-size: 1.5rem;
+						margin-left: -0.4375em;
 					}
 
 				#sidebar.inactive {
 					margin-left: -24em;
+					box-shadow: none;
 				}
 
+				body.is-loading #sidebar {
+				display: none;
+				}
 		}
 
 		@media screen and (max-width: 1280px) {
